@@ -1,7 +1,12 @@
 # Minimum Latency Problem (Traveling Repairman Problem)
 
 Trabalho Prático — Projeto e Análise de Algoritmos (CTCO04) — UNIFEI, 2º/2026 — Prof. Sávio S. Dias
-Tema 1.8 · Grupo: _Bianca_, _Isaac_, _Laura_
+Tema 1.8 
+
+Integrantes:
+- **Bianca Salvador** - [GitHub](https://github.com/biancas2-zz)
+- **Isaac Davi** - [GitHub](https://github.com/isaacdavii)
+- **Laura Raimundi** - [GitHub](https://github.com/laurajesus)
 
 Implementação em **C++17** de algoritmos exatos e heurísticos para o Problema da Latência Mínima, com testes de corretude, scripts de benchmark e geração automática de gráficos e do relatório de resultados.
 
@@ -144,14 +149,6 @@ Gera `results/{exact,quality,scale,tradeoff,perturb}.csv`, `results/environment.
 **Determinismo.** Instâncias são geradas por `make_random_euclidean(n, seed)` com `seed = 1, 2, …`, e toda aleatoriedade usa o gerador próprio `mlp::Rng` (xoshiro256**). Não usamos `std::uniform_int_distribution` porque seu algoritmo não é fixado pelo padrão e difere entre GCC, Clang e MSVC. Mesma semente ⇒ mesma instância e mesma solução em qualquer máquina. Verificamos isso com três rodadas completas em duas máquinas (CPUs e versões de GCC diferentes): todos os custos coincidiram linha a linha.
 
 **Tempos variam; custos não.** No mesmo notebook (Core i5-13420H, CPU híbrida com núcleos de desempenho e de eficiência), duas rodadas deram tempos de heurística 2,5 a 3 vezes diferentes, enquanto a DP repetiu o tempo exatamente. A causa provável é o perfil de energia e o escalonamento entre os dois tipos de núcleo durante as execuções longas. Por isso tratamos tempos como **ordem de grandeza e taxa de crescimento**, não valores absolutos. Para medir, use o notebook na tomada e no modo desempenho; no Linux, `taskset -c 0 ./scripts/run_benchmarks.sh` prende a execução num único núcleo.
-
-### Entrega
-
-Antes de compactar, remova as pastas geradas (contêm binários e caminhos absolutos da máquina):
-
-```bash
-rm -rf build build-make .venv
-```
 
 ## 5. Testes de corretude
 
