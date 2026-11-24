@@ -1,0 +1,16 @@
+build/
+build-make/
+__pycache__/
+*.o
+results/bench.log
+
+# Ambientes e editores
+.venv/
+venv/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Python
+*.pyc
