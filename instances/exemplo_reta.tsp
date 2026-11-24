@@ -1,0 +1,12 @@
+NAME : exemplo_reta
+COMMENT : 5 vertices sobre uma reta; deposito em (0,0). Otimo = 1+2+3+4 = 10
+TYPE : TSP
+DIMENSION : 5
+EDGE_WEIGHT_TYPE : EXPLICIT
+EDGE_WEIGHT_FORMAT : FULL_MATRIX
+EDGE_WEIGHT_SECTION
+0 1 2 3 4
+1 0 1 2 3
+2 1 0 1 2
+3 2 1 0 1
+4 3 2 1 0
