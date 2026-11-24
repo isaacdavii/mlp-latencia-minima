@@ -1,0 +1,6 @@
+data: 2026-11-24T11:44:01-03:00
+so: Linux 7.0.0-44-generic x86_64
+cpu: 13th Gen Intel(R) Core(TM) i5-13420H
+nucleos: 12
+compilador: c++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+flags: -O2 -std=c++17 (CMAKE_BUILD_TYPE=Release)
